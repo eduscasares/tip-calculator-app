@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --main-font: 'Space Mono';
+    --primary-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --primary-grayish-cyan: hsl(186, 14%, 43%);
+    --secondary-grayish-cyan: hsl(184, 14%, 56%);
+    --primary-light-cyan: hsl(185, 41%, 84%);
+    --secondary-light-cyan: hsl(189, 41%, 97%);
+}
+
+body {
+    background-color: var(--primary-light-cyan);
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
+}
+
+label {
+    color: var(--primary-grayish-cyan);
+    font-weight: 700;
+}
+
+input {
+    background-color: var(--secondary-light-cyan);
+    border: 2px solid var(--secondary-light-cyan);
+    border-radius: 5px;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    text-align: right;
+    outline: none;
+    color: var(--very-dark-cyan);
+    width: 100%;
+    margin-top: 10px;
+}
+
+input:focus {
+    border: 2px solid var(--primary-cyan);
+}
+
+input#customTip {
+    margin-top: 0;
+}
+
+input::placeholder, input {
+    font-family: var(--main-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+} input::placeholder { color: var(--secondary-grayish-cyan); }
+
+button {
+    font-family: var(--main-font);
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-light-cyan);
+    border-color: var(--primary-light-cyan);
+    color: var(--very-dark-cyan);
+}
+/* Sección de cabecera */
+
+.siteBranding {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.siteBranding img {
+    margin: 35px auto;
+}
+
+/* Sección de información */
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card .information .billing {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.card .information .billing > div {
+    position: relative;
+}
+
+.card .information .billing > div img {
+    position: absolute;
+    top: 42%;
+    left: 3%;
+}
+
+.card .information .billin #billAmount {
+    position: relative;
+    z-index: 10;
+}
+
+.card .information .billin #billAmount::after {
+    content: url('./images/icon-dollar.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+}
+
+.card .information .tipping ul {
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+} .card .information .tipping ul input {
+    width: 48%;
+    text-align: center;
+} .card .information .tipping ul input::placeholder {
+    text-align: center;
+}
+
+.card .information .tipping button {
+    flex: 40%;
+    padding: 10px 20px;
+    background-color: var(--very-dark-cyan);
+    border: 1px solid var(--very-dark-cyan);
+    font-size: 18px;
+    color: #fff;
+    transition: all 150ms ease-in;
+}
+.card .information .tipping button:hover {
+    background-color: var(--primary-light-cyan);
+    border-color: var(--primary-light-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.card .information .tipping button:focus {
+    background-color: var(--primary-cyan);
+    color: var(--very-dark-cyan);
+    border-color: var(--primary-cyan);
+}
+
+.card .information .peopleLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .information .people label {
+    margin-bottom: 10px;
+}
+
+.card .information .peopleLabel span {
+    color: tomato;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.card .information .peopleLabel span.showError {
+    opacity: 1;
+}
+
+.card .information .people input#numberOfPeople.showError {
+    border-color: tomato;
+}
+
+.inputPeople {
+    position: relative;
+}
+
+.inputPeople img {
+    position: absolute;
+    top: 42%;
+    left: 3%;
+}
+
+/* Sección de resultados */
+
+.card .output {
+    width: 100%;
+    background-color: var(--very-dark-cyan);
+    border: 1px solid var(--very-dark-cyan);
+    border-radius: 10px;
+    margin-top: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+} 
+
+.card .output .tipAmount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tipInfo p.tipTitle { 
+    margin: 0; 
+    color: var(--primary-light-cyan);
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.tipInfo span {
+    color: var(--secondary-grayish-cyan);
+    font-weight: 700;
+}
+
+.tipResult p {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--primary-cyan);
+}
+
+button#reset {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    background-color: var(--primary-cyan);
+    color: var(--very-dark-cyan);
+    border: 1px solid var(--primary-cyan);
+}
+
+button#reset:hover {
+    background-color: var(--primary-light-cyan);
+    border-color: var(--primary-light-cyan);
+    color: var(--very-dark-cyan);
+}
+
+@media only screen and (min-width: 1366px){
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card {
+        margin: 0 50px;
+        border-radius: 15px;
+        display: flex;
+        gap: 30px;
+        box-shadow: 0 10px 60px -5px hsla(183, 100%, 15%, 30%);
+    }
+
+    .card .information {
+        flex: 50%;
+        box-sizing: border-box;
+    }
+
+    .card .information .tipping ul input {
+        width: 48.5%;
+    }
+
+    .card .output {
+        flex: 50%;
+        display: flex;
+        padding: 50px;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+}

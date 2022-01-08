@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <main>
+    <div class="siteBranding">
+      <img src="./images/logo.svg" alt="Site branding">
+    </div>
+
+    <div class="card">
+
+      <section class="information">
+
+        <div class="billing">
+          <label>Bill</label>
+          <div>
+            <img src="./images/icon-dollar.svg" alt="Amount">
+            <input id="billAmount" type="number" placeholder="0">
+          </div>
+        </div>
+
+        <div class="tipping">
+          <label>Select Tip %</label>
+          <ul id="tips">
+            <button class="tip" value="0.05">5%</button>
+            <button class="tip" value="0.10">10%</button>
+            <button class="tip" value="0.15">15%</button>
+            <button class="tip" value="0.25">25%</button>
+            <button class="tip" value="0.50">50%</button>
+            <input id="customTip" type="number" placeholder="Custom">
+          </ul>
+        </div>
+
+        <div class="people">
+          <div class="peopleLabel">
+            <label>Number of people</label>
+            <span class="error">Can't be zero</span>
+          </div>
+          <div class="inputPeople">
+            <input id="numberOfPeople" type="number" placeholder="0"> 
+            <img src="./images/icon-person.svg" alt="Number of people">
+          </div>
+        </div>
+
+      </section>
+
+      <section class="output">
+        <div class="amounts">
+          <div class="tipAmount">
+            <div class="tipInfo">
+              <p class="tipTitle">Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <div class="tipResult">
+              <p class="results">$0.00</p>
+            </div>
+          </div>
+
+          <div class="tipAmount">
+            <div class="tipInfo">
+              <p class="tipTitle">Total</p>
+              <span>/ person</span>
+            </div>
+            <div class="tipResult">
+              <p class="results">$0.00</p>
+            </div>
+          </div>
+        </div>
+
+        <button id="reset">Reset</button>
+      </section>
+
+    </div>
+  </main> 
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
